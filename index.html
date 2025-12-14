@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas - Phuthit J. 5/13</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="snow-container"></div>
+
+    <div class="main-container">
+        <h1 class="title">Merry Christmas!</h1>
+
+        <div class="game-area">
+            <div id="gingerbread-container" class="gingerbread-container">
+                <img src="br_gingerbread.png" alt="Gingerbread Man" id="gingerbread" class="gingerbread">
+            </div>
+
+            <div id="wish-container" class="wish-container hidden">
+                <div class="wish-content">
+                    <h2 id="wish-text">May your days be merry and bright!</h2>
+                    <button id="reset-btn">Crack Another One!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <p>Tap the Gingerbread Man to see a wish!</p>
+            <button id="music-toggle">Play Music 🎵</button>
+        </div>
+    </div>
+
+    <footer class="attribution">
+        Made by Phuthit J. 5/13
+    </footer>
+
+    <!-- Audio element with loop -->
+    <audio id="bg-music" loop>
+        <!-- Using a royalty free christmas music link -->
+        <source
+            src="https://cdn.pixabay.com/download/audio/2022/11/24/audio_9a3637b5a1.mp3?filename=christmas-magic-126462.mp3"
+            type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
