@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Snowfall Logic
+    // ... (Snowfall Logic ) ...
     const snowContainer = document.getElementById('snow-container');
     const snowflakeCount = 50;
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Wishes Logic
+    // ... (Wishes Logic) ...
     const wishes = [
         "Merry Christmas! May your happiness be large and your bills be small.",
         "Wishing you a season full of light and laughter.",
@@ -82,20 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('bg-music');
     let isPlaying = false;
 
+    audio.volume = 0.1;
+
     musicBtn.addEventListener('click', () => {
         if (isPlaying) {
             audio.pause();
             musicBtn.textContent = 'Play Music 🎵';
         } else {
+            // ใช้ .play().then().catch() เพื่อจัดการกับข้อจำกัดของ Autoplay
             audio.play().then(() => {
                 musicBtn.textContent = 'Pause Music ⏸️';
             }).catch(error => {
+                // หากเบราว์เซอร์บล็อกการเล่น (ซึ่งมักจะเกิดเมื่อไม่มีการโต้ตอบ) 
                 console.log("Audio play failed, user interaction needed first.", error);
             });
         }
         isPlaying = !isPlaying;
     });
-
-    // Try auto-playing (often blocked, but worth a try with muted)
-    // audio.play().catch(() => { /* Autoplay blocked */ });
 });
